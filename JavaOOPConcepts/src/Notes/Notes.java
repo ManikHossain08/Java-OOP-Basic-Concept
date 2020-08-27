@@ -40,3 +40,5 @@ public class Notes {
 		
 	 */
 }
+
+// https://stackoverflow.com/questions/35301/what-is-the-difference-between-the-and-or-operators/35314

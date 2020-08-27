@@ -17,6 +17,7 @@ package JavaInterface;
 interface Animal {
 	public void eat();
 	public void sound();
+	public static int abc = 10;
 }
 
 interface Bird {

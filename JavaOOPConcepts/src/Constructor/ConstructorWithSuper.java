@@ -21,7 +21,7 @@ class Subclass1 extends Parentclass1 {
 		 * explicitly use super in constructor the compiler doesn't invoke the parent
 		 * constructor automatically.
 		 */
-		super("Hahaha");
+		super("Hahaha"); // after removing this and default constructor of parent class compiler will be failed to execute 
 		System.out.println("Constructor of child class");
 
 	}
