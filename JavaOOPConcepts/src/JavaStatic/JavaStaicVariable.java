@@ -6,5 +6,6 @@ public class JavaStaicVariable {
 
 }
 
-//Hashtable is the only class listed that provides synchronized methods. If you need synchronization great; otherwise, use HashMap, it's faster.
-// HashSet will not contain duplicate key;
+//Hashtable is the only class listed that provides synchronized methods. If you need synchronization great; 
+//otherwise, use HashMap, it's faster.
+//HashSet will not contain duplicate key;

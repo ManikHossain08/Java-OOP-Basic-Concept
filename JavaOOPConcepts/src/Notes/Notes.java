@@ -34,8 +34,8 @@ public class Notes {
 		A Car IS-A Vehicle and HAS-A License then the code would look like this:
 		
 		public class Vehicle{ }
-		public class Car extends Vehicle{
-		   private License myCarLicense;
+		public class Car extends Vehicle{ // IS-A RELATION
+		   private License myCarLicense; // HAS-A RELATION
 		}
 		
 	 */
