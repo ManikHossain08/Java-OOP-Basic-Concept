@@ -11,7 +11,7 @@ package tutorial_011_DirectObjectReturnDangerous;
 //	Key Points: 1) Danger: Privacy Leak when methods return arrays 
 //*******************************************************************
 
-public class Student {
+public class Client_Student {
 	
 	public static void main(String[] args) {
 		String[] courses = {"SOEN123","SOEN134", "COMP123"};

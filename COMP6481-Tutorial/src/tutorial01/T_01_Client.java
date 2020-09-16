@@ -1,8 +1,9 @@
 package tutorial01;
 
-public class T_01 {
+public class T_01_Client {
 	
 	final static int a = 10;
+	public static enum workDay {MONDAY, TUESDAY, WENESDAY, THURSDAY, FRIDAY};
 	
 	public static void main(String... args) {
 		
@@ -26,7 +27,7 @@ public class T_01 {
 		Rectangle r = new Rectangle(10, 10);
 		// here you cannot call the instance method (non-static method) from static method directly 
 		// from here.
-		T_01 c = new T_01();
+		T_01_Client c = new T_01_Client();
 		c.MyMethod(r); // updating the value by specific object means inside the object
 		System.out.println(r);
 		
@@ -65,6 +66,12 @@ public class T_01 {
 		crd.greeting(); // happy holiday
 		Valentine crd2 = new Valentine("Walter", 7);
 		crd2.greeting();
+		
+		//------------------//
+		workDay[] days = workDay.values();
+		for (int i = 0; i < days.length; i++) {
+			System.out.println(days[i]);
+		}
 		
 	}
 

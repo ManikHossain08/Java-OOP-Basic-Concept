@@ -1,6 +1,10 @@
 package Constructor;
 
 class Parentclass {
+	
+	public Parentclass() {
+		System.out.println("I am constructor of parent class."); 
+	}
 	// Overridden method
 	void display() {
 		System.out.println("Parent class method: with Super()");
@@ -8,6 +12,12 @@ class Parentclass {
 }
 
 class Subclass extends Parentclass {
+	
+	public Subclass() {
+		super();
+		System.out.println("I am constructor of child class."); 
+	}
+	
 	// Overriding method
 	@Override
 	void display() {
@@ -25,9 +35,11 @@ class Subclass extends Parentclass {
 
 public class SuperInMethodOverriding {
 	public static void main(String args[]) {
+		
 		// call super with method overriding
 		Subclass obj = new Subclass();
 		obj.printMsg();
+		
 		// no need to call super() because there is no method overriding
 		Subclass2 obj2 = new Subclass2();
 		obj2.printMsg();
@@ -41,6 +53,7 @@ class Parentclass2
 	System.out.println("Parent class method: without super()");
    }
 }
+
 class Subclass2 extends Parentclass2
 {
    void printMsg(){
