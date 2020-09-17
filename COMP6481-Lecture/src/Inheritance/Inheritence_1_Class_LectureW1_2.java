@@ -21,6 +21,7 @@ class Vehicle {
 	// Attributes
 	private int numOfDoors;
 	private double price;
+
 	
 	// Constructors
 	public Vehicle()	// default constructor 
@@ -88,6 +89,7 @@ class Bus extends Vehicle{
 		System.out.println("Creating a bus object using default constructor ....\n");
 		
 		passengerCapacity = 10;
+
 	}
 	
 	public Bus(int pc)	
