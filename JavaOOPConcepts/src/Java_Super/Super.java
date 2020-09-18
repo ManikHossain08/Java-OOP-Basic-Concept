@@ -1,9 +1,10 @@
 package Java_Super;
 
 // https://www.javatpoint.com/super-keyword
-/*
- * Super Keyword in Java
 
+/* NOTE: A constructor can have either super() or this() but not both.
+
+ * Super Keyword in Java
 -The super keyword in Java is a reference variable which is used to refer immediate parent class object.
 Whenever you create the instance of subclass, an instance of parent class is created implicitly which 
 is referred by super reference variable.
@@ -11,7 +12,6 @@ is referred by super reference variable.
 - The super keyword can also be used to invoke parent class method. It should be used if subclass contains 
 the same method as parent class. In other words, it is used if method is overridden.
  */
-
 /*
  * 3) super is used to invoke parent class constructor.
 - The super keyword can also be used to invoke the parent class constructor. Let's see a simple example:

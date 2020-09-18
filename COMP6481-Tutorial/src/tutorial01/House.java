@@ -3,7 +3,7 @@ package tutorial01;
 public class House {
 
 	private String address;
-	private Animal animal;
+	private Animal animal; // HAS-A relationship
 
 	public House(String address, Animal animal) {
 		super();

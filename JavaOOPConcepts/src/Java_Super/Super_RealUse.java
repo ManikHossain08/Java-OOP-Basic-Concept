@@ -10,6 +10,7 @@ of Person will be inherited to Emp by default. To initialize all the property, w
 constructor from child class. In such way, we are reusing the parent class constructor.
  */
 
+// NOTE: A constructor can have either super() or this() but not both.
 class Person {
 	
 	int id;
