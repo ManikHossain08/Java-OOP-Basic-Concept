@@ -27,7 +27,7 @@ import Vehicle.*;	// must import the Vehicle class to use it
 //The Vehicle class however belongs to another package 
 
 
-class Bus extends Vehicle{
+class Bus extends Vehicle {
 
 	// Attributes
 	private int passengerCapacity;
@@ -91,7 +91,7 @@ class Bus extends Vehicle{
 		
 		Bus b1 = new Bus(60, 3, 74000);
 		System.out.println("Here is the information of the created Bus:\n");
-		System.out.println("The Bus has " + b1.numOfDoors + " doors, its price is " + b1.price + 
+		System.out.println("The Bus has "+ b1.numOfDoors + " doors, its price is " + b1.price + 
 				"$, and it has a passenger capacity of " +	b1.passengerCapacity +".");
 	}
 	

@@ -10,7 +10,6 @@
 package Vehicle; 
 // This class is created in a package called Vehicle 
 
-import ProtectedAccessRightsAndPackages.*;
 
 // Vehicle Class
 public class Vehicle {
@@ -72,9 +71,5 @@ public class Vehicle {
 	}
 } // end of Vehicle class
 
-
-class AccessToChildClassFromFriend {
-	
-}
 
 	
