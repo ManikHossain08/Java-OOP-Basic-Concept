@@ -1,4 +1,4 @@
-package Composition;
+package JavaComposition;
 
 
 //*******************************************************************
@@ -16,8 +16,8 @@ package Composition;
 
 public class Car {
 	// Attributes
-	private Engine eng; //composition has-a relationship
-	private Body bdy; //composition has-a relationship
+	private Engine eng;
+	private Body bdy;
 	private double price;
 	private int year;
 

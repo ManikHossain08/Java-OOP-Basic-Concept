@@ -19,8 +19,8 @@ public class BookUtilization {
 	private static int size;
 	private static double max = Double.MIN_VALUE; 
 	private static double min = Double.MAX_VALUE; 
-	private static Book expBook;; 
-	private static Book leastbook; 
+	private static Book expBook; //composition has-a relationship
+	private static Book leastbook; //composition has-a relationship
 	
 	private static void mostExpensive() {
 		for (int i = 0; i < size; i++) {
