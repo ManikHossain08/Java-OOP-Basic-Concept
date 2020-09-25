@@ -25,7 +25,7 @@ interface Bird {
 	String outerCovering = "feather";
 	public void fly();
 }
-
+// multiple inheritance
 class Eagle implements Animal, Bird {
 
 	@Override

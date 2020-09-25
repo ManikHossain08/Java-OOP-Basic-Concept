@@ -31,6 +31,7 @@ public class Abstraction {
 		myFish.label();
 		myFish.move();
 		myFish.eat();
+		
 	}
 }
 
@@ -81,14 +82,14 @@ class Fish extends Animal {
  * A class derived from the abstract base class must implement those methods
  * that are not implemented(means they are abstract) in the abstract class.
  * 
- * Note 2: Abstract class cannot be instantiated which means you cannot create
+ * Note 2: Abstract class cannot be instantiated (e.g: Animal a = new Animal() ) which means you cannot create
  * the object of abstract class. To use this class, you need to create another
  * class that extends this abstract class provides the implementation of
  * abstract methods, then you can use the object of that child class to call
  * non-abstract parent class methods as well as implemented methods(those that
  * were abstract in parent but implemented in child class).
  * 
- * Note 3: If a child does not implement all the abstract methods of parent
+ * Note 3:*** If a child does not implement all the abstract methods of parent
  * class(the abstract class), then the child class must need to be declared
  * abstract.
  */

@@ -18,7 +18,7 @@ interface InterfaceC extends InterfaceA, InterfaceB {
 	public void doSomething();
 
 }
-
+// Multiple inheritance
 public class MultipleInheritanceByInterface implements InterfaceA, InterfaceB, InterfaceC {
 
 	@Override
