@@ -120,8 +120,8 @@ class Bus8 extends Vehicle8{
 		// (i.e. super(nd, pr);) since either "this" or 'super" must be the first 
 		// statement, and it is not possible to have both of them as such!
 		
-		setPrice(pr);		
-		setNumOfDoors(nd); 
+		this.setPrice(pr);		
+		super.setNumOfDoors(nd); 
 		
 	}
 
@@ -143,6 +143,7 @@ class Bus8 extends Vehicle8{
 	}
 	
 	// Override the setPrice() method
+	@Override
 	public void setPrice(double pr)
 	{
 		if(pr < getPrice())

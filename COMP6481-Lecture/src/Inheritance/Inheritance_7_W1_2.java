@@ -82,6 +82,7 @@ class Bus7 extends Vehicle7{
 	// Constructors
 	public Bus7()	// default constructor 
 	{
+		//super(4,3);
 		System.out.println("Creating a bus object using default constructor ....\n");
 		
 		passengerCapacity = 10;
