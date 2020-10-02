@@ -9,7 +9,7 @@ package JavaComposition;
 
 /*
  * HERE COMPOSITION IS USED FOR MULTIPLE INHERITANCE BECAUSE BY USING ABSTRACT CLASS IT IS NOT POSSIBLE
- * TO DO IT FOR AMBIGUITY REASON. THEREFORE, COMPOSIOTN IS USEFULL IN THIS CASE.
+ * TO IMPLEMENT MULTIPLE INHERITANCE FOR AMBIGUITY PROBLEM. THEREFORE, COMPOSIOTN IS USEFULL IN THIS CASE.
  * 
  */
 
@@ -69,34 +69,36 @@ public class ClassC extends ClassA, ClassB{
  */
 
 
+// TO SOLVE THIS ABOVE AMBIGIOUS PROBLEM COMPOSITION IS THE BEST APPROACH
 
+// HERE CLASS C IMPLEMENTATION WAS NOT WISE BECAUSE IT IS EARLY BINDING WILL WORK ON COMPILE TIME.
 class ClassC {
 
 	ClassA objA = new ClassA(); // has a relation = composition
 	ClassB objB = new ClassB();
 	
 	public void test(){
-		objA.doSomething(); // THIS IS STATIC/ RUN-TIME BINDING, WE CAN MAKE IT DYMANIC SEE IN MAIN CLASS. 
+		objA.doSomething(); // THIS IS STATIC/ COMPILE-TIME BINDING, WE CAN MAKE IT DYMANIC SEE IN MAIN CLASS. 
 	}
 	
 	public void methodA(){
-		objA.methodA(); // THIS IS STATIC/ RUN-TIME BINDING, WE CAN MAKE IT DYMANIC SEE IN MAIN CLASS. 
+		objA.methodA(); // THIS IS STATIC/ COMPILE-TIME BINDING, WE CAN MAKE IT DYMANIC SEE IN MAIN CLASS. 
 	}
 	
 	public void methodB(){
-		objB.methodB(); // THIS IS STATIC/ RUN-TIME BINDING, WE CAN MAKE IT DYMANIC SEE IN MAIN CLASS. 
+		objB.methodB(); // THIS IS STATIC/ COMPILE-TIME BINDING, WE CAN MAKE IT DYMANIC SEE IN MAIN CLASS. 
 	}
 }
 
 // this is THE REPLACEMENT OF class 'ClassC'  for dynamic binding instead of static / runtime binding
 public class InheritanceVsComposition {
 	public static void main(String[] args) {
-		// BEFORE: STATIC BINDING DURING RUN-TIME
+		// BEFORE: STATIC BINDING DURING COMPILE-TIME
 		ClassC c = new ClassC();
 		c.test();
 		c.methodB();
 		
-		// AFTER: DYNAMIC BINDING AND THIS SHOULD BE THE REPLACEMENT OF class 'ClassC'  
+		// AFTER: DYNAMIC BINDING (RUN-TIME) AND THIS SHOULD BE THE REPLACEMENT OF class 'ClassC'  
 		InheritanceVsComposition obj1 = new InheritanceVsComposition(new ClassA()); // DYNAMIC BINDING
 		InheritanceVsComposition obj2 = new InheritanceVsComposition(new ClassB()); // DYNAMIC BINDING
 		
