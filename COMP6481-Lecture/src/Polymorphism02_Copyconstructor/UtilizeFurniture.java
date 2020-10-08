@@ -1,4 +1,4 @@
-package Polymorphism_Copyconstructor;
+package Polymorphism02_Copyconstructor;
 
 
 class Furniture {
@@ -51,11 +51,14 @@ class Furniture {
 		return new Furniture(this);
 	}
 	
-	public Furniture isCheaper(Furniture f) {
+	public boolean isCheaper(Furniture f) {
 		if (this.getPrice() > f.getPrice()) {
-			System.out.println(this.getClass() +" is expensive than " + f.getClass());
+			System.out.println(this.getClass() +" is more expensive than " + f.getClass());
+			return true;
+		}else {
+			System.out.println(this.getClass() +" is less expensive than " + f.getClass());
+			return false;
 		}
-		return f;
 	}
 
 }
@@ -113,15 +116,6 @@ class Chair extends Furniture {
 		return new Chair(this);
 	}
 	
-	@Override
-	public Furniture isCheaper(Furniture f) {
-		if (this.getPrice() > f.getPrice()) {
-			System.out.println(this.getClass() +" is more expensive than " + f.getClass());
-		}else {
-			System.out.println(this.getClass() +" is less expensive than " + f.getClass());
-		}
-		return f;
-	}
 
 }
 
@@ -182,13 +176,6 @@ class Carpet extends Furniture {
 		return new Carpet(this);
 	}
 	
-	@Override
-	public Furniture isCheaper(Furniture f) {
-		if (this.getPrice() > f.getPrice()) {
-			System.out.println(this.getClass() +" is expensive than " + f.getClass());
-		}
-		return f;
-	}
 }
 
 class Table extends Furniture {
@@ -270,13 +257,6 @@ class Table extends Furniture {
 		return new Table(this);
 	}
 	
-	@Override
-	public Furniture isCheaper(Furniture f) {
-		if (this.getPrice() > f.getPrice()) {
-			System.out.println(this.getClass() +" is expensive than " + f.getClass());
-		}
-		return f;
-	}
 }
 
 class AntiqueCarpet extends Furniture {
@@ -357,13 +337,6 @@ class AntiqueCarpet extends Furniture {
 		return new AntiqueCarpet(this);
 	}
 	
-	@Override
-	public Furniture isCheaper(Furniture f) {
-		if (this.getPrice() > f.getPrice()) {
-			System.out.println(this.getClass() +" is expensive than " + f.getClass());
-		}
-		return f;
-	}
 }
 
 /**
@@ -463,6 +436,9 @@ public class UtilizeFurniture {
 		
 		c1.isCheaper(f1);
 		f1.isCheaper(c1);
+		cr1.isCheaper(t1);
+		t1.isCheaper(ac4);
+		ac1.isCheaper(c2);
 		
 		
 	}
