@@ -175,6 +175,7 @@ class Bus extends Vehicle{
 	}
 	
 	// Override the setPrice() method
+	@Override
 	public void setPrice(double pr)
 	{
 		if(pr < getPrice())
@@ -190,6 +191,7 @@ class Bus extends Vehicle{
 		
 	}
 	
+	@Override
 	public double getPrice()
 	{
 		// Obtain the class name

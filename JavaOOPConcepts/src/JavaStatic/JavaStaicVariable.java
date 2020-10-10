@@ -45,6 +45,16 @@ to refer to.
 Static Method doesn’t require instance creation, so it’s generally faster and provides better performance. That’s why utility class methods in Wrapper classes, System class, Collections class are all static methods.
 It’s possible to write fluent code when static imports are used. You will see this a lot in testing frameworks such as JUnit and TestNG.
 When your method only depends on its parameters, object state has no effect on the method behavior. Then you can create the method as static.
+ 
+Static Variable
+
+When you declare a variable as static, then a single copy of the variable is created and 
+divided among all objects at the class level. Static variables are, essentially, global variables. 
+Basically, all the instances of the class share the same static variable. Static variables can be 
+created at class-level only.
+ 
+ *
+ *
  */
 
 public class JavaStaicVariable {

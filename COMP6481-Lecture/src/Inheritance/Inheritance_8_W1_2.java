@@ -103,6 +103,9 @@ class Bus8 extends Vehicle8{
 	{
 		System.out.println("Creating a bus object using copy constructor ....\n");
 		
+		this.setPrice(b.getPrice());
+		this.setNumOfDoors(b.getNumOfDoors());
+		
 		passengerCapacity = b.passengerCapacity;
 	}
 	

@@ -163,7 +163,7 @@ class Bus4 extends Vehicle4{
 		super.setPrice(pr);		
 		// Notice that you cannot access "price" directly  since it is private to the base class
 		// i.e. price = pr; would be illegal
-		kb.close();
+		//kb.close();
 	}
 }   // end of Bus class
 

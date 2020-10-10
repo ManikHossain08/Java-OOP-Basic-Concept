@@ -71,7 +71,7 @@ public class Car {
 		super();
 		this.eng = eng;
 		this.bdy = bdy;
-		this.price = price;
+		this.price = (eng.getPrice() + bdy.getPrice()) * profitRate;
 		this.year = year;
 	}
 

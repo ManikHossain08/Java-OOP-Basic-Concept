@@ -19,6 +19,8 @@ public class Composition {
 
 		System.out.println(c3);
 		System.out.println();
+		
+		c1.setPrice(100); 
 
 	}
 

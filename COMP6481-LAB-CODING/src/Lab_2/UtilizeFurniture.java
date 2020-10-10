@@ -41,7 +41,7 @@ class Furniture {
 		return "Furniture [Price=" + Price + "]";
 	}
 
-	public int getNumberOfCreatedObject() {
+	public static int getNumberOfCreatedObject() {
 
 		return furnitureCounter;
 	}
@@ -91,8 +91,7 @@ class Chair extends Furniture {
 		return "Chair [height=" + height + "]";
 	}
 
-	@Override
-	public int getNumberOfCreatedObject() {
+	public static int getNumberOfCreatedObject() {
 		return chairCounter;
 	}
 
@@ -145,8 +144,7 @@ class Carpet extends Furniture {
 		return "Carpet [color=" + color + "]";
 	}
 
-	@Override
-	public int getNumberOfCreatedObject() {
+	public static int getNumberOfCreatedObject() {
 		return carpetCounter;
 	}
 }
@@ -220,8 +218,7 @@ class Table extends Furniture {
 		return "Table [length=" + length + ", width=" + width + ", height=" + height + "]";
 	}
 
-	@Override
-	public int getNumberOfCreatedObject() {
+	public static int getNumberOfCreatedObject() {
 		return tableCounter;
 	}
 }
@@ -291,8 +288,7 @@ class AntiqueCarpet extends Furniture {
 			super.setPrice(price);
 	}
 
-	@Override
-	public int getNumberOfCreatedObject() {
+	public static int getNumberOfCreatedObject() {
 		return antiqueCarpetCounter;
 	}
 }
@@ -301,6 +297,9 @@ public class UtilizeFurniture {
 	public static int objCounter = 0;
 
 	public static void main(String[] args) {
+		
+		// getNumberOfCreatedObject() function should be static and called by className and it 
+		// should not called by the same class object
 		
 		Furniture f1 = new Furniture(5000);
 		Furniture f2 = new Furniture(4000);
@@ -314,7 +313,7 @@ public class UtilizeFurniture {
 		Chair c3 = new Chair(c1);
 		System.out.println("Object equality of the Chair (c1 & c2): " + c1.equals(c2));
 		System.out.println("Object equality of the Chair (c3 & c1): " + c3.equals(c1));
-		System.out.println( c3.getNumberOfCreatedObject() +" chairs objects were created");
+		System.out.println( Chair.getNumberOfCreatedObject() +" chairs objects were created");
 		System.out.println();
 		
 		Carpet cr1 = new Carpet("Green");
@@ -322,16 +321,16 @@ public class UtilizeFurniture {
 		Carpet cr3 = new Carpet(cr1);
 		System.out.println("Object equality of the Carpet (cr1 & cr2): " + cr1.equals(cr2));
 		System.out.println("Object equality of the Carpet (cr3 & cr1): " + cr3.equals(cr1));
-		System.out.println( cr3.getNumberOfCreatedObject() +" carpet objects were created");
+		System.out.println( Carpet.getNumberOfCreatedObject() +" carpet objects were created");
 		System.out.println();
 		
 		Table t1 = new Table(100, 105, 400);
 		Table t2 = new Table(100, 1050, 300);
 		Table t3 = new Table(t1);
-		Table t4 = new Table(t2);
+		//Table t4 = new Table(t2);
 		System.out.println("Object equality of the Carpet (t1 & t2): " + t1.equals(t2));
 		System.out.println("Object equality of the Carpet (t3 & t1): " + t3.equals(t1));
-		System.out.println( t3.getNumberOfCreatedObject() +" table objects were created");
+		System.out.println( Table.getNumberOfCreatedObject() +" table objects were created");
 		System.out.println();
 		
 		AntiqueCarpet ac1 = new AntiqueCarpet(2020, "CA");
@@ -340,7 +339,7 @@ public class UtilizeFurniture {
 		AntiqueCarpet ac4 = new AntiqueCarpet(ac2);
 		System.out.println("Object equality of the Carpet (ac1 & ac2): " + ac1.equals(ac2));
 		System.out.println("Object equality of the Carpet (ac3 & ac1): " + ac3.equals(ac1));
-		System.out.println( ac4.getNumberOfCreatedObject() +" antiqueCarpets objects were created");
+		System.out.println( AntiqueCarpet.getNumberOfCreatedObject() +" antiqueCarpets objects were created");
 		System.out.println();
 		
 		ac4.setPrice(8000);
@@ -350,7 +349,9 @@ public class UtilizeFurniture {
 		System.out.println(ac3);
 		
 		
-		System.out.println( f1.getNumberOfCreatedObject() +" furniture objects were created");
+		System.out.println( Furniture.getNumberOfCreatedObject() +" furniture objects were created");
+		
+		
 		
 		
 	}
