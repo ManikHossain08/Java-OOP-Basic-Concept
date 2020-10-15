@@ -1,0 +1,4 @@
+Pride And Prejudice|Jane Austen|20.76
+The Murder of Roger Ackroyd|Agatha Christie|25.67
+Atlas Shrugged|Ayn Rand|34.56
+Gone with the Wind|Margaret Mitchell|36.78
