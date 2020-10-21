@@ -1,10 +1,11 @@
-package FileReadAndSerialization;
+package File_IO_Binary;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Date;
 
 // https://www.codejava.net/java-se/file-io/java-serialization-basic-example
@@ -46,16 +47,15 @@ public class SerializableExample {
          
         User newUser = new User(username, email, password, birthDay, age);
         
-        serialize(newUser);
+        serializeClassObject(newUser);
         
-        User savedUser = deserialize();
-         
+        User savedUser = deserializeClassObject();
         if (savedUser != null) {
             savedUser.printInfo();
         }
     }
 	
-	private static void serialize(User newUser) {
+	private static void serializeClassObject(User newUser) {
 		try {
             ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filePath));
             outputStream.writeObject(newUser);
@@ -66,7 +66,7 @@ public class SerializableExample {
 		
 	}
 
-	private static User deserialize() {
+	private static User deserializeClassObject() {
 		User savedUser = null;
         
         try {
@@ -82,3 +82,44 @@ public class SerializableExample {
 
 
 }
+
+/*
+ * SerialVersionUID:
+	The Serialization runtime associates a version number with each Serializable class called a SerialVersionUID, 
+	which is used during Deserialization to verify that sender and reciever of a serialized object have loaded 
+	classes for that object which are compatible with respect to serialization. If the reciever has loaded a class 
+	for the object that has different UID than that of corresponding sender’s class, the Deserialization will 
+	result in an InvalidClassException.
+ */
+
+class User implements Serializable {
+	private static final long serialVersionUID = 1234L;
+	 
+    private String username;
+    private String email;
+    private transient String password; 
+    // transient Because we don’t want store the password when serializing the object. The rule is, when a 
+    // variable is marked as transient, its object won’t be serialized during serialization.  
+    private Date birthday;
+    private int age;
+ 
+    public User(String username, String email, String password, Date birthday,
+            int age) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.birthday = birthday;
+        this.age = age;
+    }
+ 
+    public void printInfo() {
+        System.out.println("username: " + username);
+        System.out.println("email: " + email);
+        System.out.println("password: " + password);
+        System.out.println("birthday: " + birthday);
+        System.out.println("age: " + age);
+    }
+ 
+    // A simple implementation of getters and setters
+}
+

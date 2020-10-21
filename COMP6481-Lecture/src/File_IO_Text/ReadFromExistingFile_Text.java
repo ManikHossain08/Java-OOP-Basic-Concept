@@ -1,4 +1,4 @@
-package File_IO_Text_Binary;
+package File_IO_Text;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
