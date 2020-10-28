@@ -111,8 +111,22 @@ class User implements Serializable {
         this.birthday = birthday;
         this.age = age;
     }
+    
+    
  
-    public void printInfo() {
+    public int getAge() {
+		return age;
+	}
+
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+
+	public void printInfo() {
         System.out.println("username: " + username);
         System.out.println("email: " + email);
         System.out.println("password: " + password);
