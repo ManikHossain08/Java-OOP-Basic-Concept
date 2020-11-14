@@ -1,4 +1,4 @@
-package Lab_6;
+package LinkedList_Lab_7;
 
 import java.util.Stack;
 
